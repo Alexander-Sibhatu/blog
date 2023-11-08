@@ -22,7 +22,7 @@ nav {
   align-items: center;
   height: 5vh;
   width: 100vw;
-  background-color: rgb(174, 84, 0);
+  background-color: rgb(0, 174, 165);
   gap: 1rem;
 }
 main {
@@ -37,6 +37,11 @@ main {
 .nav_link:hover {
   color: white;
 }
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer {
   display: flex;
   justify-content: center;
@@ -45,3 +50,37 @@ main {
   background-color: rgb(200, 200, 163);
   width: 100vw;
 }
+
+.add_Blog{
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  
+}
+
+.blogs {
+  
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: rgb(208, 251, 231);
+}
+
+.active {
+  color: white;
+}
+

@@ -1,24 +1,34 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteBlog } from './blogsSlice';
 
-const Blog = () => {
+const Blogs = () => {
     const {blogs} = useSelector((state) => state.blogR);
-    console.log(blogs);
+    const dispatch = useDispatch()
+
+    const handleDelete = (id) => {
+        dispatch(deleteBlog(id));
+    }
+
   return (
-    <div>
+    <div className='blogs'>
         {
             blogs.map((blog) => {
-                const {id, title, body} = blog;
+                const {id, title, body } = blog;
+                
                 return(
-                    <div key={id}>
-                        <h1>{title}</h1>
-                        <div>{body}</div>
-                    </div>
-                    )
-                })
-        }
+                        <div className='blog' key={id}>
+                            <h1 className='title'>{title}</h1>
+                            <div>{body}</div>
+                            <button onClick={() => handleDelete(id)} className='btn'>Delete
+                            </button>
+                        </div>
+                )
+            })
+            }
     </div>
   )
 }
 
-export default Blog
+export default Blogs
+

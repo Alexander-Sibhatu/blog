@@ -6,6 +6,7 @@ import Error from '../pages/Error'
 import Footer from '../layouts/Footer'
 import AddBlog from '../pages/AddBlog'
 import NavBar from '../layouts/NavBar'
+import Blog from '../features/Blog'
 
 
 const Index = () => {
@@ -19,7 +20,7 @@ const Index = () => {
                 <main>
                     <Routes>
                         <Route path='/' element={<Home /> } />
-                        <Route path='/show-blogs' element={<Home /> } />
+                        <Route path='/show-blogs' element={<Blog /> } />
                         <Route path='/add-blog' element={<AddBlog /> } />
                         <Route path='*' element={<Error /> } />
                     </Routes>

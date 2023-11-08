@@ -19,18 +19,19 @@ const AddBlog = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='add_Blog'>
+      <h2>Write your own blog</h2>
       <input type='text' className='title' placeholder='Enter title' 
         onChange={(event) => {
           setTitle(event.target.value)
         }} value={title}>
       </input>
-      <input type='text' className='body' placeholder='Write your blog' 
+      <textarea type='text' className='body' placeholder='Write your blog' 
         onChange={(event) => {
           setBody(event.target.value)
         }} value={body}>
-      </input>
-      <button type='submit'>Submit</button>
+      </textarea>
+      <button type='submit' className='btn'>Submit</button>
     </form>
   )
 
